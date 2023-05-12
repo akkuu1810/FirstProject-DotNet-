@@ -5,8 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FirstProject.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
+
         private readonly IUnitOfWork _unitOfWork;
         public CategoryController(IUnitOfWork unitOfWork) //Implementation of ApplicationDbContext & will populate db with this implementation
         {
