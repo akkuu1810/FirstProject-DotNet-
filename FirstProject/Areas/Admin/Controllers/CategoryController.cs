@@ -1,11 +1,14 @@
 ﻿using FirstProject.DataAccess;
 using FirstProject.DataAccess.Repository.IRepository;
 using FirstProject.Models;
+using FirstProject.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FirstProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class CategoryController : Controller
     {
 

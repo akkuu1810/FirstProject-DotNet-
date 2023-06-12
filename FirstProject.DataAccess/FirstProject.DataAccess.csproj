@@ -22,10 +22,9 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
   </ItemGroup>
 
-  
-
   <ItemGroup>
     <ProjectReference Include="..\FirstProject.Models\FirstProject.Models.csproj" />
+    <ProjectReference Include="..\FirstProject.Utility\FirstProject.Utility.csproj" />
   </ItemGroup>
 
 </Project>

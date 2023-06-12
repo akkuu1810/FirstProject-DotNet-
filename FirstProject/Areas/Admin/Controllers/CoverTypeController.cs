@@ -1,12 +1,15 @@
 ﻿using FirstProject.DataAccess;
 using FirstProject.DataAccess.Repository.IRepository;
 using FirstProject.Models;
+using FirstProject.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FirstProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class CoverTypeController : Controller
+	[Authorize(Roles = SD.Role_Admin)]
+	public class CoverTypeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
         public CoverTypeController(IUnitOfWork unitOfWork) //Implementation of ApplicationDbContext & will populate db with this implementation

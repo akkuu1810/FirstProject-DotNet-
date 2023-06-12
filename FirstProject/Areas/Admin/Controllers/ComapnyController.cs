@@ -3,6 +3,8 @@ using FirstProject.DataAccess.Repository;
 using FirstProject.DataAccess.Repository.IRepository;
 using FirstProject.Models;
 using FirstProject.Models.ViewModels;
+using FirstProject.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -10,7 +12,8 @@ namespace FirstProject.Areas.Admin.Controllers
    
 {
     [Area("Admin")]
-    public class CompanyController : Controller
+	[Authorize(Roles = SD.Role_Admin)]
+	public class CompanyController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
       
